@@ -1,0 +1,32 @@
+[2019-11-11 21:33:32.725] [exthost] [info] extension host started
+[2019-11-11 21:33:32.752] [exthost] [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch {"startup":true,"extensionId":{"value":"vscode.debug-auto-launch","_lower":"vscode.debug-auto-launch"},"activationEvent":"*"}
+[2019-11-11 21:33:32.752] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/share/code/resources/app/extensions/debug-auto-launch/dist/extension
+[2019-11-11 21:33:32.756] [exthost] [info] ExtensionService#_doActivateExtension vscode.emmet {"startup":true,"extensionId":{"value":"vscode.emmet","_lower":"vscode.emmet"},"activationEvent":"*"}
+[2019-11-11 21:33:32.756] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/share/code/resources/app/extensions/emmet/dist/extension
+[2019-11-11 21:33:32.786] [exthost] [info] ExtensionService#_doActivateExtension vscode.git {"startup":true,"extensionId":{"value":"vscode.git","_lower":"vscode.git"},"activationEvent":"*"}
+[2019-11-11 21:33:32.786] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/share/code/resources/app/extensions/git/dist/main
+[2019-11-11 21:33:32.834] [exthost] [info] ExtensionService#_doActivateExtension vscode.merge-conflict {"startup":true,"extensionId":{"value":"vscode.merge-conflict","_lower":"vscode.merge-conflict"},"activationEvent":"*"}
+[2019-11-11 21:33:32.834] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/share/code/resources/app/extensions/merge-conflict/dist/extension
+[2019-11-11 21:33:32.837] [exthost] [info] ExtensionService#_doActivateExtension Equinusocio.vsc-material-theme {"startup":true,"extensionId":{"value":"Equinusocio.vsc-material-theme","_lower":"equinusocio.vsc-material-theme"},"activationEvent":"*"}
+[2019-11-11 21:33:32.837] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/alejandro/.vscode/extensions/equinusocio.vsc-material-theme-30.0.0/out/src/material.theme.config
+[2019-11-11 21:33:32.842] [exthost] [info] ExtensionService#_doActivateExtension esbenp.prettier-vscode {"startup":true,"extensionId":{"value":"esbenp.prettier-vscode","_lower":"esbenp.prettier-vscode"},"activationEvent":"*"}
+[2019-11-11 21:33:32.842] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/alejandro/.vscode/extensions/esbenp.prettier-vscode-3.2.0/dist/extension
+[2019-11-11 21:33:32.925] [exthost] [info] ExtensionService#_doActivateExtension Janne252.fontawesome-autocomplete {"startup":true,"extensionId":{"value":"Janne252.fontawesome-autocomplete","_lower":"janne252.fontawesome-autocomplete"},"activationEvent":"*"}
+[2019-11-11 21:33:32.925] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/alejandro/.vscode/extensions/janne252.fontawesome-autocomplete-0.1.8/out/extension
+[2019-11-11 21:33:32.964] [exthost] [info] ExtensionService#_doActivateExtension PKief.material-icon-theme {"startup":true,"extensionId":{"value":"PKief.material-icon-theme","_lower":"pkief.material-icon-theme"},"activationEvent":"*"}
+[2019-11-11 21:33:32.964] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/alejandro/.vscode/extensions/pkief.material-icon-theme-3.9.1/dist/extension
+[2019-11-11 21:33:32.977] [exthost] [info] ExtensionService#_doActivateExtension vscode-icons-team.vscode-icons {"startup":true,"extensionId":{"value":"vscode-icons-team.vscode-icons","_lower":"vscode-icons-team.vscode-icons"},"activationEvent":"*"}
+[2019-11-11 21:33:32.977] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/alejandro/.vscode/extensions/vscode-icons-team.vscode-icons-9.5.0/dist/src/vscode-icons.bundle.js
+[2019-11-11 21:33:33.027] [exthost] [info] ExtensionService#_doActivateExtension vscode.npm {"startup":true,"extensionId":{"value":"vscode.npm","_lower":"vscode.npm"},"activationEvent":"workspaceContains:package.json"}
+[2019-11-11 21:33:33.027] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/share/code/resources/app/extensions/npm/dist/main
+[2019-11-11 21:33:33.303] [exthost] [info] eager extensions activated
+[2019-11-11 21:33:56.720] [exthost] [info] ExtensionService#_doActivateExtension vscode.configuration-editing {"startup":false,"extensionId":{"value":"vscode.configuration-editing","_lower":"vscode.configuration-editing"},"activationEvent":"onLanguage:json"}
+[2019-11-11 21:33:56.720] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/share/code/resources/app/extensions/configuration-editing/dist/extension
+[2019-11-11 21:33:56.725] [exthost] [info] ExtensionService#_doActivateExtension vscode.extension-editing {"startup":false,"extensionId":{"value":"vscode.extension-editing","_lower":"vscode.extension-editing"},"activationEvent":"onLanguage:json"}
+[2019-11-11 21:33:56.725] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/share/code/resources/app/extensions/extension-editing/dist/extension
+[2019-11-11 21:33:56.740] [exthost] [info] ExtensionService#_doActivateExtension vscode.json-language-features {"startup":false,"extensionId":{"value":"vscode.json-language-features","_lower":"vscode.json-language-features"},"activationEvent":"onLanguage:json"}
+[2019-11-11 21:33:56.740] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/share/code/resources/app/extensions/json-language-features/client/dist/jsonMain
+[2019-11-11 21:33:56.804] [exthost] [info] ExtensionService#_doActivateExtension eg2.vscode-npm-script {"startup":false,"extensionId":{"value":"eg2.vscode-npm-script","_lower":"eg2.vscode-npm-script"},"activationEvent":"onLanguage:json"}
+[2019-11-11 21:33:56.804] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/alejandro/.vscode/extensions/eg2.vscode-npm-script-0.3.9/dist/extension
+[2019-11-11 21:34:40.321] [exthost] [info] ExtensionService#_doActivateExtension vscode.typescript-language-features {"startup":false,"extensionId":{"value":"vscode.typescript-language-features","_lower":"vscode.typescript-language-features"},"activationEvent":"onLanguage:jsonc"}
+[2019-11-11 21:34:40.321] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/share/code/resources/app/extensions/typescript-language-features/dist/extension

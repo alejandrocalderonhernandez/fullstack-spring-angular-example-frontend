@@ -1,0 +1,7 @@
+file:///home/alejandro/Projects/Angular/fullstack-spring-angular-example-frontend/proxy.conf.json {"mtime":1573529636569,"size":0,"etag":"346annf090","orphaned":false}
+{
+    "/api": {
+      "target": "http://localhost:3000",
+      "secure": false
+    }
+}

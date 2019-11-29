@@ -1,0 +1,36 @@
+[INFO - 21:33:33] Extension Name: esbenp.prettier-vscode.
+[INFO - 21:33:33] Extension Version: 0.0.0.
+[INFO - 21:33:33] No path provided, using bundled prettier.
+[INFO - 21:33:33] No path provided, using bundled prettier.
+[WARN - 21:33:33] Falling back to bundled version of prettier.
+[INFO - 21:33:33] Enabling prettier for languages:
+[
+  "javascript",
+  "mongo",
+  "javascriptreact",
+  "typescript",
+  "typescriptreact",
+  "json",
+  "jsonc",
+  "json5",
+  "css",
+  "postcss",
+  "less",
+  "scss",
+  "graphql",
+  "markdown",
+  "mdx",
+  "html",
+  "vue",
+  "yaml"
+]
+[INFO - 21:33:33] Enabling prettier for range supported languages:
+[
+  "javascript",
+  "javascriptreact",
+  "typescript",
+  "typescriptreact",
+  "json",
+  "graphql"
+]
+[INFO - 21:41:01] No path provided, using bundled prettier.
