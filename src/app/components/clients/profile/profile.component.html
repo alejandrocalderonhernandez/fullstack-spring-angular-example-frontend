@@ -1,0 +1,84 @@
+<div *ngIf="modalService.showModal" class="open-modal">
+    <div class="modal" tabindex="-1" role="dialog" style="display:block;">
+            <div class="modal-dialog modal-large" role="document">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">{{title}}</h5>
+                    <button (click)="closeModal()" 
+                            type="button" 
+                            class="close" 
+                            data-dismiss="modal" 
+                            aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                            <div class="row">
+                                <div class="col-sm">
+            
+                                    <ul *ngIf="Client" class="list-group mb-3">
+                                        <li class="list-group-item">{{client.name}}</li>
+                                        <li class="list-group-item">{{client.lastName}}</li>
+                                        <li class="list-group-item">{{client.email}}</li>
+                                        <li class="list-group-item">{{client.createdAt}} | date: "fullDate"</li>
+                                    </ul>
+            
+                                    <div class="input-group mb-3">
+            
+                                        <div class="custom-file">
+                                            <input type="file" class="custom-file-input" id="inputGroupFile04">
+                                            <label class="custom-file-label" for="inputGroupFile04">Choose file</label>
+                                        </div>
+            
+                                        <div class="input-group-append">
+                                            <button 
+                                                [disabled]="!photoSelected"
+                                                (click)="uploadPhoto()" 
+                                                class="btn btn-outline-secondary" 
+                                                type="button">
+                                                    Select
+                                            </button>
+                                        </div>
+            
+                                        <div *ngIf="progress > 0" class="progress">
+                                            <div class="progress-bar progress-bar-striped" 
+                                                    role="progressbar" 
+                                                    [NgStyle]="{width: progress+'%'}" 
+                                                    attr.aria-valuenow="{{progress}}" 
+                                                    aria-valuemin="0" 
+                                                    aria-valuemax="100">
+                                                    {{progress}}%
+                                            </div>
+                                        </div>
+            
+                                    </div>
+            
+                                </div>
+            
+                                <div class="col-sm">
+            
+                                    <div>
+                                        <img *ngIf="client?.photo" 
+                                                class=class="img-thumbnail rounded"
+                                                src="localhost:8090/api/clients/clients/img/{{client.photo}}" 
+                                                alt="{{client.photo}}">
+                                    </div>
+            
+                                </div>s
+            
+                            </div>
+                        </div>
+                </div>
+                <div class="modal-footer">
+                    <button (click)="closeModal()" 
+                            type="button" 
+                            class="btn btn-secondary" 
+                            data-dismiss="modal">
+                                Close
+                    </button>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>

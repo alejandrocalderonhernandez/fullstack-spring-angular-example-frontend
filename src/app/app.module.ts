@@ -9,12 +9,16 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormComponent } from './components/clients/form/form.component';
 
 import { APP_ROUTING } from './app.routes';
+import { PaginatorComponent } from './components/paginator/paginator.component';
+import { ProfileComponent } from './components/clients/profile/profile.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ClientsComponent,
-    FormComponent
+    FormComponent,
+    PaginatorComponent,
+    ProfileComponent
   ],
   imports: [
     APP_ROUTING,

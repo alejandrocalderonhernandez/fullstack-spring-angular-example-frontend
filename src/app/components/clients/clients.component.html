@@ -1,3 +1,6 @@
+
+<app-profile *ngIf="clientSelected" [client]="clientSelected"></app-profile>
+
 <div class="card border-primary mb-3">
 
     <div class="card-header">Clients</div>
@@ -11,7 +14,12 @@
         </div>
     </div>
 
-    <table class="table table-bordered table-striped">
+    <div  class="alert alert-info" *ngIf="clients.length === 0">
+        The database is empty
+    </div>
+
+    <table class="table table-bordered table-striped" *ngIf="clients.length > 0">
+
         <thead>
             <tr>
                 <th>Id</th>
@@ -19,20 +27,40 @@
                 <th>lastname</th>
                 <th>email</th>
                 <th>date of creation</th>
+                <th>edit</th>
+                <th>remove</th>
             </tr>
         </thead>
+
         <tbody>
             <tr *ngFor="let client of clients">
-                <td>{{client.id}}</td>
+                <td>
+                    <button type="button" 
+                            class="btn btn-light btn-sm"
+                            (click)="openModal(client)">
+                                {{client.id}}
+                    </button>
+                </td>
                 <td>{{client.name}}</td>
                 <td>{{client.lastname}}</td>
                 <td>{{client.email}}</td>
-                <td>{{client.createdAt}}</td>
+                <td>{{client.createdAt | date}}</td>
                 <td>
-                    <button class="btn btn-success" type="button" [routerLink]="['/clients/form', client.id]" routerLinkActive="router-link-active" ></button>
+                    <button 
+                        class="btn btn-success" type="button" [routerLink]="['/clients/form', client.id]" routerLinkActive="router-link-active" >
+                        Edit
+                    </button>
+                </td>
+                <td>
+                    <button class="btn btn-danger" type="button" (click)="delete(client)" >
+                        Delete
+                    </button>
                 </td>
             </tr>
         </tbody>
+
     </table>
+
+    <app-paginator *ngIf="paginator" [paginator] = paginator></app-paginator>
 
 </div>

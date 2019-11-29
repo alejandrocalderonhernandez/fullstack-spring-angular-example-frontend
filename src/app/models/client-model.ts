@@ -5,4 +5,5 @@ export class ClientModel {
     email: string;
     lastName: string;
     createdAt: Date;
+    photo: string;
 }
