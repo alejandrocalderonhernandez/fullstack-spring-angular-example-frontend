@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,6 +12,9 @@ import { FormComponent } from './components/clients/form/form.component';
 import { APP_ROUTING } from './app.routes';
 import { PaginatorComponent } from './components/paginator/paginator.component';
 import { ProfileComponent } from './components/clients/profile/profile.component';
+import { RegionComponent } from './components/region/region.component';
+import { LoginComponent } from './components/login/login.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +22,10 @@ import { ProfileComponent } from './components/clients/profile/profile.component
     ClientsComponent,
     FormComponent,
     PaginatorComponent,
-    ProfileComponent
+    ProfileComponent,
+    RegionComponent,
+    LoginComponent,
+    NavbarComponent
   ],
   imports: [
     APP_ROUTING,
@@ -26,6 +33,7 @@ import { ProfileComponent } from './components/clients/profile/profile.component
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    CommonModule,
     ReactiveFormsModule
   ],
   providers: [],

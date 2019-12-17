@@ -18,9 +18,10 @@ export class ProfileComponent implements OnInit {
 
   title: 'client';
   private photoSelected: File;
-  private progress = 0;
   private messagesSuccess = new SuccessMesages();
   private messagesError = new ErrorMessages();
+  protected progress = 0;
+  num = 1;
 
   constructor( private service: ClientService,
                private modalService: ModalService ) { }

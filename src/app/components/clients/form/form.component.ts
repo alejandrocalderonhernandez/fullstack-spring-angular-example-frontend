@@ -4,6 +4,9 @@ import { ClientService } from 'src/app/services/client.service';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 import { SuccessMesages } from 'src/app/utils/messages/succes-messages';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { RegionService } from 'src/app/services/region.service';
+import { RegionModel } from 'src/app/models/region.model';
+import { ErrorMessages } from 'src/app/utils/messages/error-messages';
 
 @Component({
   selector: 'app-form',
@@ -15,14 +18,16 @@ export class FormComponent implements OnInit {
   private messages = new SuccessMesages();
   public formClient: FormGroup;
   public title = 'Client';
+  private regions: RegionModel[];
   private errors: string[];
 
   constructor( private service: ClientService, private router: Router,
-               private activateRoutr: ActivatedRoute ) { }
+               private activateRoutr: ActivatedRoute, private regionService: RegionService ) { }
 
   ngOnInit() {
     this.loadClient();
     this.setForm();
+    this.getRegions();
   }
 
   public createClient(): void {
@@ -57,6 +62,13 @@ export class FormComponent implements OnInit {
       });
   }
 
+  protected compareRegion(o1: RegionModel, o2: RegionModel): boolean {
+    if ( o1 === undefined && o2 === undefined ) {
+      return true;
+    }
+    return o1 == null || o2 == null ? false : o1.id === o2.id;
+  }
+
   private setForm(): void {
     this.formClient = new FormGroup({
       name: new FormControl('', [
@@ -76,6 +88,12 @@ export class FormComponent implements OnInit {
         Validators.pattern('[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$')
       ]),
       createAt: new FormControl('',[])
+    });
+  }
+
+  private getRegions(): void {
+    this.regionService.getRegions().subscribe( region => {
+      this.regions = region;
     });
   }
 }

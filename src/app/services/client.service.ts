@@ -5,6 +5,8 @@ import { HttpClient, HttpHeaders, HttpRequest, HttpEvent } from '@angular/common
 import { map, catchError, tap } from 'rxjs/operators';
 import { ErrorMessages } from '../utils/messages/error-messages';
 import { Router } from '@angular/router';
+import { LoginService } from './login.service';
+import { SuccessMesages } from '../utils/messages/succes-messages';
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +16,9 @@ export class ClientService {
   private uri = 'localhost:8090/api/clients/';
   private messages = new ErrorMessages();
 
-  constructor( private http: HttpClient, private router: Router ) { }
+  constructor( private http: HttpClient, private router: Router,
+               private loginService: LoginService,
+               private messagess = SuccessMesages ) { }
 
   public getAllClients( page: number ): Observable<any> {
     const urlFindAll = `${this.uri}clients/${page}`;
@@ -78,12 +82,31 @@ export class ClientService {
     return this.http.request(req);
   }
 
+  private isNotAuthorized( e ): boolean {
+    if ( e.status === 401 ) {
+      if ( this.loginService.isAuthenticated() ) {
+        this.loginService.logout();
+      }
+      this.router.navigate(['/login']);
+    }
+
+    if ( e.status === 403 ) {
+      this.messages.showBasicMessage('Unatithorized!');
+      this.router.navigate(['/clients']);
+      return true;
+    }
+
+    return false;
+  }
+
   private getHeaders(): {headers: HttpHeaders} {
+    const token = this.loginService.getToken();
     const httpHeaders = new HttpHeaders();
+    httpHeaders.set('Authorization', 'Bearer ' + token);
     httpHeaders.set('Content-Type', 'application/json');
     httpHeaders.set('Access-Control-Allow-Origin', '*');
     httpHeaders.set('Access-Control-Max-Age', '3600');
-    httpHeaders.set('Access-Control-Allow-Methods', 'POST, GET, OPTIONS, DELETE, PATCH, OPTIONS');
+    httpHeaders.set('Access-Control-Allow-Methods', 'POST, GET, DELETE, PATCH, PUT, OPTIONS');
     const options = {
       headers: httpHeaders
     };

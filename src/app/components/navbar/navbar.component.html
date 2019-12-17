@@ -1,0 +1,36 @@
+<nav class="navbar navbar-dark bg-dark">
+    <span class="text-white">My system</span>
+
+    <div *ngIf="!loginService. isAuthenticated()">
+        <button
+            class="btn btn-primary" 
+            type="button" 
+            data-toggle="collapse" 
+            data-target="#navbarNav" 
+            aria-controls="navbarNav" 
+            aria-expanded="false" 
+            aria-label="Toggle navigation"
+            [routerLink]="['/login']" routerLinkActive="router-link-active" 
+        >
+        Sing in
+        </button>
+    </div>
+
+    <div *ngIf="loginService. isAuthenticated()">
+        <button
+            class="btn btn-primary" 
+            type="button" 
+            data-toggle="collapse" 
+            data-target="#navbarNav" 
+            aria-controls="navbarNav" 
+            aria-expanded="false" 
+            aria-label="Toggle navigation"
+            (click) = "logout()"
+        >
+        Sing out
+        </button>
+    </div>
+
+
+</nav>
+  

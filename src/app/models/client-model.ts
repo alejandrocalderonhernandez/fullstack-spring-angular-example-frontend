@@ -1,3 +1,4 @@
+import { RegionModel } from './region.model';
 
 export class ClientModel {
     id: number;
@@ -6,4 +7,5 @@ export class ClientModel {
     lastName: string;
     createdAt: Date;
     photo: string;
+    region: RegionModel;
 }
